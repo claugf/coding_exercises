@@ -10,6 +10,7 @@ defmodule LeapYear do
     except every year that is evenly divisible by 100 rem100= no LP
       unless the year is also evenly divisible by 400
   """
+  @spec is_leap_year?(non_neg_integer) :: boolean
   def is_leap_year?(year) when is_integer(year) do
     cond do
       rem(year, 4) != 0 -> false
